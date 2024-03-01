@@ -4,15 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Palindrome Checker</title>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <input type="text" id="text-input" placeholder="Enter a value">
-  <button id="check-btn" onclick="isPalindrome(document.getElementById('text-input').value)">Check</button>
+  <button id="check-btn" onclick="checkPalindrome(document.getElementById('text-input').value)">Check</button>
   <div id='result'></div>
-  <script type='text/javascript' src="script.js">
-        document.getElementById('result').innerText = isPalindrome(inputValue);
-  </script>
+  <script>
+    function checkPalindrome(){
+        let inputValue = document.getElementById('text-input').value;
+     if (inputValue === ''){
+        alert('Please input a value');
+        return;
+    } else {
+        let result = isPalindrome(inputValue);
+        document.getElementById('result').innerText = result;
+    }
 
+}
+  </script>
 </body>
 </html>
