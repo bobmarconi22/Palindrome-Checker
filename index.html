@@ -8,8 +8,14 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <h1>Is it a Palindrome?</h1>
+  <div id="input-area">
+    <p>Enter a phrase or word:</p>
+    <div id="text-line">
   <input type="text" id="text-input" placeholder="Enter a value">
   <button id="check-btn" onclick="checkPalindrome(document.getElementById('text-input').value)">Check</button>
+</div>
+</div>
   <div id='result'></div>
   <script>
     function checkPalindrome(){
